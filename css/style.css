@@ -25,6 +25,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
+  cursor: default;
 }
 
 h1,
@@ -177,7 +178,6 @@ button:hover {
   padding: 2rem 1rem;
   color: var(--color-text);
   border-radius: 1rem;
-  cursor: default;
   box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.38);
 }
 
@@ -201,6 +201,7 @@ button:hover {
 .jobs {
   display: flex;
   justify-content: center;
+  text-align: start;
   margin: 2.5rem 0;
 }
 .job {
@@ -221,4 +222,40 @@ button:hover {
 .job__period {
   color: var(--color-primary);
   font-size: 0.8rem;
+}
+
+/* Skills */
+#skills {
+  background-color: var(--color-primary-variant);
+  color: var(--color-text);
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  margin: 2rem 3rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.38);
+}
+
+.skills__title {
+  color: var(--color-accent);
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+.skills__coding {
+  grid-row: span 2;
+  padding: 1rem;
+  background-color: var(--color-primary);
+}
+
+.skills__tools {
+  padding: 1rem;
+}
+
+.skills__etc {
+  padding: 1rem;
+  background-color: var(--color-primary);
+  filter: brightness(150%);
 }
