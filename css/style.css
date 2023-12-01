@@ -78,6 +78,7 @@ button:hover {
 }
 /* Header */
 .header {
+  background-color: var(--color-primary);
   width: 100%;
   padding: 1rem;
   position: fixed;
@@ -167,16 +168,22 @@ button:hover {
 }
 
 /* About */
+#about {
+  background-color: var(--color-primary-variant);
+  color: var(--color-text);
+}
 .majors {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 3rem;
   margin: 2.5rem 0;
 }
 
 .major {
-  background-color: var(--color-primary-variant);
-  padding: 2rem 1rem;
+  background-color: var(--color-primary);
+  width: 100%;
+  max-width: 20rem;
+  padding: 2rem 0;
   color: var(--color-text);
   border-radius: 1rem;
   box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.38);
@@ -200,44 +207,34 @@ button:hover {
 }
 
 .jobs {
-  display: flex;
-  justify-content: center;
   text-align: start;
-  margin: 2.5rem 0;
+  margin-top: 4rem;
 }
 .job {
   display: flex;
   align-items: center;
   gap: 8px;
   margin: 1rem 0;
+  color: var(--color-text);
 }
 .job__img {
   width: 50px;
   height: 50px;
 }
 
-.job__name {
-  color: var(--color-primary);
-}
-
 .job__period {
-  color: var(--color-primary);
   font-size: 0.8rem;
 }
 
 /* Skills */
-#skills {
-  background-color: var(--color-primary-variant);
-  color: var(--color-text);
-}
-
 .skills {
   display: grid;
   grid-template-columns: 6fr 4fr;
   margin: 2rem 3rem;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.38);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: var(--color-text);
 }
 
 .skills__title {
@@ -248,15 +245,19 @@ button:hover {
 .skills__coding {
   grid-row: span 2;
   padding: 1rem;
+  padding-bottom: 2rem;
   background-color: var(--color-primary);
 }
 
 .skills__tools {
+  background-color: var(--color-primary-variant);
   padding: 1rem;
+  padding-bottom: 2rem;
 }
 
 .skills__etc {
   padding: 1rem;
+  padding-bottom: 2rem;
   background-color: var(--color-primary);
   filter: brightness(150%);
 }
@@ -286,7 +287,8 @@ button:hover {
 
 /* Work */
 #work {
-  color: var(--color-primary);
+  background-color: var(--color-primary-variant);
+  color: var(--color-text);
 }
 
 .categories {
@@ -299,9 +301,9 @@ button:hover {
 .category {
   position: relative;
   padding: 0.5rem 3rem;
-  border: 1px solid var(--color-accent);
+  border: 2px solid var(--color-accent);
   border-radius: 4px;
-  color: var(--color-primary);
+  color: var(--color-text);
   font-size: 1.1rem;
   cursor: pointer;
   white-space: nowrap;
@@ -415,4 +417,68 @@ button:hover {
 
 .contact__icon:hover {
   color: var(--color-accent);
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 3rem 2rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: start;
+  }
+  .header__nav {
+    width: 100%;
+  }
+  .header__menu {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 4rem;
+    gap: 1rem;
+  }
+
+  #home {
+    padding-bottom: 3rem;
+  }
+  .home__title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .majors {
+    flex-direction: column;
+    align-items: center;
+  }
+  .job {
+    justify-content: center;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+  }
+
+  .categories {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .category {
+    width: 100%;
+  }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .arrow-up {
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
 }

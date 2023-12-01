@@ -35,7 +35,7 @@
         <img class="header__logo__img" src="images/favicon.ico" alt="logo" />
         <h1 class="header__logo__title"><a href="#">Eunji</a></h1>
       </div>
-      <nav>
+      <nav class="header__nav">
         <ul class="header__menu">
           <li><a class="header__menu__item active" href="#home">Home</a></li>
           <li><a class="header__menu__item" href="#about">About</a></li>
@@ -61,29 +61,39 @@
         <a class="home__contact" href="#contact">Contact Me</a>
       </section>
       <!-- About -->
-      <section id="about" class="section max-container">
-        <h2 class="title">About me</h2>
-        <p class="description">
-          현재 프론트엔드 개발을 공부 중인 사이버보안 전공생입니다.
-        </p>
-        <ul class="majors">
-          <li class="major">
-            <i class="fa-brands fa-html5 major__icon"></i>
-            <p class="major__title">Front-end</p>
-            <p>HTML, CSS, JavaScript, React</p>
-          </li>
-        </ul>
-        <ul class="jobs">
-          <li class="job">
-            <img class="job__img" src="images/profile/school.png" alt="Ewha" />
-            <div>
-              <p class="job__name">
-                majored in Cyber Security at Ewha Womans University
-              </p>
-              <p class="job__period">2018 Mar - 2024 Feb</p>
-            </div>
-          </li>
-        </ul>
+      <section id="about" class="section">
+        <div class="max-container">
+          <h2 class="title">About me</h2>
+          <p class="description">
+            현재 프론트엔드 개발을 공부 중인 사이버보안 전공생입니다.
+          </p>
+          <ul class="majors">
+            <li class="major">
+              <i class="fa-brands fa-html5 major__icon"></i>
+              <p class="major__title">HTML &amp; CSS</p>
+              <p>postCSS, Tailwind CSS</p>
+            </li>
+            <li class="major">
+              <i class="fa-brands fa-react major__icon"></i>
+              <p class="major__title">Java Script</p>
+              <p>React</p>
+            </li>
+          </ul>
+          <ul class="jobs">
+            <li class="job">
+              <img
+                class="job__img"
+                src="images/profile/school.png"
+                alt="Ewha" />
+              <div>
+                <p class="job__name">
+                  majored in Cyber Security at Ewha Womans University
+                </p>
+                <p class="job__period">2018 Mar - 2024 Feb</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
       <!-- Skills -->
       <section id="skills" class="section">
