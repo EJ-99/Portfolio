@@ -9,9 +9,17 @@ document.addEventListener('scroll', () => {
   }
 });
 
-// 홈 섹션을 아래로 스크롤 시 투명하게 처리.
+// 홈 섹션을 아래로 스크롤 시 투명하게 처리
 const home = document.querySelector('.home__container');
 const homeHeight = home.offsetHeight;
 document.addEventListener('scroll', () => {
   home.style.opacity = `${0.1 + (homeHeight - scrollY) / homeHeight}`;
+});
+
+// 아래로 스크롤시 Arrow up 버튼을 투명하게 처리
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+  scrollY / homeHeight > 1 / 2
+    ? arrowUp.classList.add('arrow-up--visible')
+    : arrowUp.classList.remove('arrow-up--visible');
 });

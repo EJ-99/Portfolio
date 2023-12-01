@@ -392,6 +392,8 @@ button:hover {
 
 /* Arrow up */
 .arrow-up {
+  visibility: hidden;
+  opacity: 0;
   background-color: var(--color-primary);
   position: fixed;
   bottom: 3rem;
@@ -402,6 +404,12 @@ button:hover {
   border-radius: 100%;
   text-align: center;
   box-shadow: 2px 2px 0px 0px var(--color-accent);
+  transition: all 300ms ease-in;
+}
+
+.arrow-up--visible {
+  visibility: visible;
+  opacity: 1;
 }
 
 /* Footer */
