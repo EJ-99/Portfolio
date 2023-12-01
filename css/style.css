@@ -78,7 +78,7 @@ button:hover {
 }
 /* Header */
 .header {
-  background-color: var(--color-primary);
+  background-color: transparent;
   width: 100%;
   padding: 1rem;
   position: fixed;
@@ -87,6 +87,11 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   z-index: 1;
+  transition: all 300ms ease;
+}
+.header--dark {
+  background-color: var(--color-primary);
+  box-shadow: 0 3px 20px var(--color-primary-variant);
 }
 
 .header__logo {
@@ -126,7 +131,7 @@ button:hover {
   background-color: var(--color-primary);
   color: var(--color-text);
   padding: 5rem 1rem;
-  padding-top: 7rem;
+  padding-top: 9rem;
   text-align: center;
 }
 
