@@ -23,3 +23,16 @@ document.addEventListener('scroll', () => {
     ? arrowUp.classList.add('arrow-up--visible')
     : arrowUp.classList.remove('arrow-up--visible');
 });
+
+// header의 토글 버튼 클릭 처리
+const navbarMenu = document.querySelector('.header__menu');
+const navbarToggle = document.querySelector('.header__toggle');
+navbarToggle.addEventListener('click', () => {
+  navbarMenu.classList.toggle('header__menu--open');
+});
+
+// navbar 메뉴 클릭 시 메뉴 닫음
+navbarMenu.addEventListener('click', (e) => {
+  if (e.target.tagName !== 'A') return;
+  navbarMenu.classList.remove('header__menu--open');
+});
