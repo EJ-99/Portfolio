@@ -6,10 +6,11 @@ const projects = document.querySelectorAll('.project');
 const projectsContainer = document.querySelector('.projects');
 
 categories.addEventListener('click', (e) => {
-  const filter = e.target.dataset.filter;
+  const filter =
+    e.target.dataset.filter || e.target.parentElement.dataset.filter;
   if (filter == null) return;
-
-  handleActiveSelection(e.target);
+  const target = e.target.dataset.filter ? e.target : e.target.parentElement;
+  handleActiveSelection(target);
   projectsContainer.classList.add('anim-out');
   setTimeout(() => {
     filterProjects(filter);

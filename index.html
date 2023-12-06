@@ -25,12 +25,15 @@
     <script
       src="https://kit.fontawesome.com/0f2aaab88e.js"
       crossorigin="anonymous"></script>
+    <!-- TypeIt -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- Javascript -->
     <script type="module" src="src/main.js" defer></script>
     <script type="module" src="src/projects.js" defer></script>
     <script type="module" src="src/active_menu.js" defer></script>
+    <script type="module" src="src/type.js" defer></script>
   </head>
   <body>
     <!-- Header -->
@@ -56,26 +59,26 @@
     <main>
       <!-- Home -->
       <section id="home">
-        <div class="home__container">
+        <div class="home__container max-container">
           <img
             class="home__avatar"
             src="images/profile/profile.png"
             alt="Eunji's profile" />
-          <h2 class="home__title">
-            Hello<br />
-            I&#39;m <strong class="home__title--strong">Eunji</strong>
-          </h2>
-          <p class="home__description">A Front-end engineer.</p>
-          <a class="home__contact" href="#contact">Contact Me</a>
+          <div class="home__descriptions">
+            <h2 class="home__title" aria-label="Hello I'm Eunji">
+              Hello<br />
+              I&#39;m <strong class="home__title--strong">Eunji.</strong>
+            </h2>
+            <p class="home__description">A Front-end engineer.</p>
+            <a class="home__contact" href="#contact">Contact Me</a>
+          </div>
         </div>
       </section>
       <!-- About -->
       <section id="about" class="section">
         <div class="max-container">
           <h2 class="title">About me</h2>
-          <p class="description">
-            현재 프론트엔드 개발을 공부 중인 사이버보안 전공생입니다.
-          </p>
+          <p class="description">현재 웹 프론트엔드를 공부하는 학생입니다.</p>
           <ul class="majors">
             <li class="major">
               <i class="fa-brands fa-html5 major__icon"></i>
