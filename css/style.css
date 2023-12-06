@@ -550,6 +550,13 @@ button:hover {
   #home {
     padding-bottom: 3rem;
   }
+  .home__container {
+    flex-direction: column-reverse;
+    padding-top: 1.5rem;
+  }
+  .home__avatar {
+    width: 300px;
+  }
   .home__title {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
